@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  vars_files:
+     - answerfile-deployLab.yml
+  tasks:
+  - name: gather moid for ds
+    vcenter_gather_moids:
+      hostname: "192.168.49.61"
+      username: "administrator@vsphere.local"
+      password: "qkrrmsgP!@34"
+      datacenter_name: "Datacenter"
+      datastore_name: "iscsi_400GB_32_2"
+      validate_certs: False
+    register: gather_moids_ds
+    tags: esg_create
+

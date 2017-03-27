@@ -3,15 +3,15 @@
   connection: local
   gather_facts: False
   vars_files:
-     - answerfile_old_nsxman.yml
+     - answerfile-deployLab.yml
   tasks:
   - name: nsx_logical_switch Operation
     nsx_logical_switch:
       nsxmanager_spec: "{{ nsxmanager_spec }}"
-      state: absent
+      state: present
       transportzone: "TZ"
       name: "TestLS"
-      controlplanemode: "HYBRID_MODE"
+      controlplanemode: "UNICAST_MODE"
       description: "My Great Logical Switch"
     register: create_logical_switch
 

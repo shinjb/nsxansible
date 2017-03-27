@@ -42,10 +42,10 @@ vcSsoPassword: "vmware"
 
 # NSX Manager credentials and RAML file path
 nsxmanager_spec: 
-  raml_file: '/Users/yfauser/Documents/Development/vmware-org/nsxraml/nsxvapiv614.raml'
-  host: "{{ deployMgmtIpAddress }}"
+  raml_file: '/home/shinjb/nsxraml/nsxvapi.raml'
+  host: "192.168.49.62"
   user: 'admin'
-  password: "{{ nsxCliPass }}"
+  password: "qkrrmsgP!@34"
 
 # NSX configuration details
 # including controller deployment environment details and IP Pools
